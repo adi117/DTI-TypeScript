@@ -1,5 +1,3 @@
-export function add(a, b) {
-    console.log(a + b);
-    return a + b;
+export function areaRectangle(length, width) {
+    return length * width;
 }
-add(5, 3);

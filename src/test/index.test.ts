@@ -1,8 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { add } from '../index.js';
+import { areaRectangle } from '../index.js';
 
-describe('Math functions', () => {
+describe('Area of Rectangle', () => {
   it('adds two numbers correctly', () => {
-    expect(add(2, 3)).toBe(5);
+    expect(areaRectangle(2, 3)).toBe(6);
+    expect(areaRectangle(5, 10)).toBe(50);
+    expect(areaRectangle(9, 3)).toBe(27);
+
   });
 });
