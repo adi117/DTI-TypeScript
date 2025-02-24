@@ -1,3 +1,5 @@
+import { CircleProperties } from "./circle.js";
+
 // Calculate Rectangle
 export function areaRectangle(length: number, width:number){
     return length * width;
@@ -5,16 +7,12 @@ export function areaRectangle(length: number, width:number){
 
 
 //Calculate Circle
-export function circleDiameter(radius:number){
-    return parseFloat((radius * 2).toFixed(10));
-}
-
-export function circleArea(radius:number){
-    return parseFloat((Math.PI * Math.pow(radius, 2)).toFixed(10));
-}
-
-export function circleCircumstance(radius:number){
-    return parseFloat((2 * Math.PI * radius).toFixed(10));
+export function circleCalculate(radius:number): CircleProperties{
+    return {
+        diameter : radius * 2,
+        area : parseFloat((Math.PI * Math.pow(radius, 2)).toFixed(10)),
+        circumstance : parseFloat((2 * Math.PI * radius).toFixed(10))
+    }
 }
 
 // Calculate Triangle

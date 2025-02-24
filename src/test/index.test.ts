@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { areaRectangle, circleArea, circleCircumstance, circleDiameter, dayDiference, initialName, triangleAngle } from '../index.js';
+import { areaRectangle, circleCalculate, dayDiference, initialName, triangleAngle } from '../index.js';
 
 describe('Area of Rectangle', () => {
   it('estimate the area of rectangle', () => {
@@ -11,22 +11,25 @@ describe('Area of Rectangle', () => {
 });
 
 describe('Circle Diameter, Area, and Circumstance', () => {
+  let circleCalculation = circleCalculate(4);
+
+
   it('diameter of circle', () => {
-    expect(circleDiameter(4)).toBe(8);
-    expect(circleDiameter(10)).toBe(20);
-    expect(circleDiameter(7)).toBe(14);
+    expect(circleCalculate(4).diameter).toBe(8);
+    expect(circleCalculate(10).diameter).toBe(20);
+    expect(circleCalculate(7).diameter).toBe(14);
   });
 
   it('circumstance of circle', () => {
-    expect(circleCircumstance(4)).toBe(25.1327412287);
-    expect(circleCircumstance(10)).toBe(62.8318530718);
-    expect(circleCircumstance(7)).toBe(43.9822971503);
+    expect(circleCalculate(4).circumstance).toBe(25.1327412287);
+    expect(circleCalculate(10).circumstance).toBe(62.8318530718);
+    expect(circleCalculate(7).circumstance).toBe(43.9822971503);
   });
 
   it('area of circle', () => {
-    expect(circleArea(4)).toBe(50.2654824574);
-    expect(circleArea(10)).toBe(314.159265359);
-    expect(circleArea(7)).toBe(153.9380400259);
+    expect(circleCalculate(4).area).toBe(50.2654824574);
+    expect(circleCalculate(10).area).toBe(314.159265359);
+    expect(circleCalculate(7).area).toBe(153.9380400259);
   });
 });
 
