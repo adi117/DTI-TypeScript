@@ -23,7 +23,11 @@ export function triangleAngle(angle1:number, angle2:number){
 }
 
 // Calculate Day Differences Between 2 Dates
-
+export function dayDiference(date1:Date, date2:Date){
+    let differentTime = Math.abs(date2.getTime() - date1.getTime());
+    let timeToDays = differentTime / (24 * 3600 * 1000);
+    return timeToDays;
+}
 
 // Print Initial Name in Uppercase
 export function initialName(name:string){
