@@ -21,3 +21,18 @@ export function circleCircumstance(radius:number){
 export function triangleAngle(angle1:number, angle2:number){
     return 180 - angle1 - angle2;
 }
+
+// Calculate Day Differences Between 2 Dates
+
+
+// Print Initial Name in Uppercase
+export function initialName(name:string){
+    let arrayName = name.split(' ');
+    let initialName = new Array(arrayName.length);
+
+    for (let i = 0; i < arrayName.length; i++) {
+        initialName[i] = arrayName[i].charAt(0).toUpperCase();
+    }
+
+    return initialName.join('');
+}

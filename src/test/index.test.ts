@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { areaRectangle, circleArea, circleCircumstance, circleDiameter, triangleAngle } from '../index.js';
+import { areaRectangle, circleArea, circleCircumstance, circleDiameter, initialName, triangleAngle } from '../index.js';
 
 describe('Area of Rectangle', () => {
   it('estimate the area of rectangle', () => {
@@ -36,5 +36,22 @@ describe('Triangle Angle', () => {
     expect(triangleAngle(50, 20)).toBe(110);
     expect(triangleAngle(90, 45)).toBe(45);
 
+  });
+});
+
+
+describe('Get Days Difference'), () =>{
+  it('get how many day difference between 2 dates'), () => {
+    const day1 = new Date('1/1/2001');
+    const day2 = new Date('12/12/2012');
+    
+
+  }
+}
+
+
+describe('Uppercase Initial Name', () => {
+  it('print only initial name', () => {
+    expect(initialName("Muhammad Adi Wicaksono")).toBe("MAW");
   });
 });
