@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { areaRectangle, circleArea, circleCircumstance, circleDiameter } from '../index.js';
+import { areaRectangle, circleArea, circleCircumstance, circleDiameter, triangleAngle } from '../index.js';
 
 describe('Area of Rectangle', () => {
   it('estimate the area of rectangle', () => {
@@ -27,5 +27,14 @@ describe('Circle Diameter, Area, and Circumstance', () => {
     expect(circleArea(4)).toBe(50.2654824574);
     expect(circleArea(10)).toBe(314.159265359);
     expect(circleArea(7)).toBe(153.9380400259);
+  });
+});
+
+describe('Triangle Angle', () => {
+  it('calculate third angle degree of triangle', () => {
+    expect(triangleAngle(45, 32)).toBe(103);
+    expect(triangleAngle(50, 20)).toBe(110);
+    expect(triangleAngle(90, 45)).toBe(45);
+
   });
 });
